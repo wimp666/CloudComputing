@@ -33,6 +33,11 @@ public class StudentService {
 	    System.out.println(stu.toString());	
 		return stu;
 	}
+	public Student addProgramToStu(String studentId, String programId) {
+		Student stu = stu_Map.get(studentId);
+		stu.setStuProgram(InMemoryDatabase.getProgramDB().get(programId));
+		return stu;
+	}
 	public Student deleteStudent(String studentId) {
 		Student deletedStuDetails = stu_Map.get(studentId);
 		stu_Map.remove(studentId);

@@ -51,6 +51,13 @@ public class StudentResource {
 	}
 	
 	@PUT
+	@Path("/{studentId}/{programId}")
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Student addProgToStudent(@PathParam("studentId") String studentId,@PathParam("programId") String programId) {
+		return stuService.addProgramToStu(studentId, programId);
+	}
+	@PUT
 	@Path("/{studentId}")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)

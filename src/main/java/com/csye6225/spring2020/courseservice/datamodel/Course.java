@@ -21,12 +21,16 @@ public class Course {
 	private ArrayList<String> courseRoster;
 	private HashMap<String, Student> courseStu;
 	
+	public Course() {}
+	
 	public Course(String courseName, String courseId, String courseBoard){
-		courseRoster = new ArrayList<>();
-		courseStu = new HashMap<>();
+		this.courseRoster = new ArrayList<>();
+		this.courseStu = new HashMap<>();
 		this.courseName = courseName;
 		this.courseId = courseId;
 		this.courseBoard = courseBoard;
+		this.apId = "";
+		this.TAId = "";
 	}
 	
 	public String getCourseName() {

@@ -11,11 +11,17 @@ public class InMemoryDatabase {
 	private static HashMap<String, Student> studentDB = new HashMap<> ();
 	private static HashMap<String, Program> programDB = new HashMap<> ();
 	private static HashMap<String, Course> courseDB = new HashMap<> ();
+	private static HashMap<String, Lecture> lectureDB = new HashMap<> ();
 	
 	public static HashMap<String, Program> getProgramDB(){
 		programDB.put("001", new Program("001","Royal Navy"));
 		return programDB;
 	}
+	public static HashMap<String, Lecture> getLectureDB(){
+		lectureDB.put("week1", new Lecture("week1"));
+		return lectureDB;
+	}
+	
 
 	public static HashMap<String, Professor> getProfessorDB() {
 		professorDB.put("KelK", new Professor("Kelsey", "k", "coop","20200802"));
